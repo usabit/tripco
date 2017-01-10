@@ -1,0 +1,29 @@
+<footer class="site-footer">
+    <div class="wrapper">
+
+        <nav class="page-map mtb-20">
+            <ul>
+                <li><a href="#">Termos e Condições</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+            </ul>
+        </nav>
+
+        <ul class="social-media-list mt-40">
+            {% for social_link in site.social-links %}
+            <li>
+                {% include icon-social.html link=social_link.link icon=social_link.icon %}
+            </li>
+            {% endfor %}
+        </ul> 
+
+        <a class="site-title mtb-20" href="{{ site.baseurl }}/">
+            <img src="/assets/img/tripco-logo-black.png" alt="Tripco">
+        </a>
+
+    </div>
+</footer>
+
+<script src="/assets/libs/jquery/dist/jquery.js"></script>
+<script src="/assets/libs/owl.carousel/dist/owl.carousel.js"></script>
+
+<script src="/assets/js/main.js"></script>

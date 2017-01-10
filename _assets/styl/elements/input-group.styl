@@ -1,0 +1,39 @@
+.input-group {
+    position relative
+    background-color white
+    padding 5px 9px
+    border-radius 3px
+    align-self flex-start
+    cursor text
+
+    span {
+        color alpha(black, .4)
+        position absolute
+        top 1rem
+        left 9px
+        transition 200ms
+        font-style italic
+    }
+    
+    input:not([value=""]) + span,
+    input:focus + span {
+        top .5rem
+        font-size .7rem
+    }
+    
+    input {
+        min-width 300px
+        margin-top 18px
+        font-size 1rem
+        border 0
+        outline 0
+    }
+    
+    &.full-width {
+        width 100%
+        
+        input {
+            width 100%
+        }
+    }
+}

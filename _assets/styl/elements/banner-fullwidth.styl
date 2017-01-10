@@ -1,0 +1,112 @@
+section.banner-fullwidth {
+  width 100%
+  position relative
+  
+  .owl-nav {
+    display flex
+    align-items center
+    justify-content space-between
+    
+    .owl-prev,
+    .owl-next {
+      z-index 999
+      position absolute
+      top 50%
+      left 20px
+      transform translateY(-50%)
+      color white
+      font-size 25px
+      text-shadow 1px 1px alpha(black, .7)
+    }
+    .owl-next {
+      right 20px
+      left initial
+    }
+  }
+  
+  .owl-dots {
+    display flex
+    align-items center
+    justify-content center
+    left 0
+    right 0
+    
+    position absolute
+    bottom 25px
+    transform translateY(-50%)
+    .owl-dot {
+      margin 0 7px
+      span {
+        display inline-block
+        size(12px)
+        border-radius 50%
+        border 1px solid white
+        box-shadow 1px 1px alpha(black, .7)
+      }
+      
+      &.active span {
+        background-color white
+      }
+    }
+  }
+  
+  ul.banner {
+    padding 0
+    margin 0
+    list-sytle none
+    
+    li {
+      background-size cover
+      background-position center center
+      margin 0
+      padding 0
+      position relative
+      z-index 1
+      width 100%
+      
+      &:after {
+        background alpha(black, .4)
+        content ''
+        position absolute
+        trbl 0
+        z-index -1
+      }
+      
+      &.noshadow:after {
+        content none
+      }
+      
+      .wrapper {
+        min-height 585px
+        padding 160px 0 50px 0
+        display flex
+        flex-direction column
+        justify-content center
+        align-items center
+        color white
+      }      
+      
+      h1,
+      p {
+        line-height 1.5
+        color white
+        text-shadow 1px 1px alpha(black, .3)
+        
+        &.inverted {
+          background-color corPrincipal
+          padding 20px
+          max-width initial
+          display inline-block
+          align-self flex-start
+          margin-bottom 0
+        }
+        
+        +below('mobile'){
+          br {
+            display none
+          }          
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+footer.site-footer {
+  margin-bottom 30px
+  .wrapper {
+    display flex
+    align-items center
+    flex-direction column
+    
+    border-top 1px solid alpha(black, .3)
+    padding-top 20px
+    
+    +below('tablet'){
+      // flex-direction column
+      // align-items center
+      flex-wrap wrap
+    }
+    
+    nav.page-map {
+      > ul {
+        display flex
+      }
+      > ul > li {
+        font-size .7rem
+        &:after {
+          content "|"
+          margin 0 5px
+          text-decoration none
+        }
+        &:last-child:after{
+          content none
+        }
+      }
+
+      a {
+        font-size inherit
+        color black
+        text-decoration none
+        border-bottom 1px solid transparent
+        padding-bottom 2px
+        
+        &:hover {
+          border-bottom 1px solid black
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+section.contato {
+  display flex
+  
+  +below(900px){
+    flex-direction column
+    align-items center
+  }
+    
+  .contact-method {
+    flex 1
+    display flex
+    flex-direction column
+    align-items stretch
+
+    h1 {
+      color corPrincipal
+      +below(900px){
+        text-align center
+      }
+    }
+    &:first-child {
+      margin-right 40px
+      +below(900px){
+        min-width 350px
+        margin-right 0
+        margin-bottom 40px
+      }
+    }
+    
+    .fb-page {
+      +below(900px){
+        align-self center
+        width 99%
+        display flex
+        justify-content center
+      }
+    }
+    
+    .social-media-list {
+      flex-direction column
+      .social-media-link {
+        margin 14px 0
+        font-size 1.5rem
+        font-weight 300
+        span.fa-stack {
+          font-size 1.1em
+        }
+        &:first-child {
+          margin-top 0
+        }
+      }
+    }
+
+  }
+}
