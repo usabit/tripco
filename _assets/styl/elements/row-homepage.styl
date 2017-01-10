@@ -1,0 +1,48 @@
+.row-homepage {
+    border-top 1px solid alpha(black, .4)
+    
+    .row-content {
+        display flex
+    }
+
+    .img-wrap {
+        width 40%
+        flex 40
+        display flex
+        justify-content flex-start
+        align-items center
+    }
+    
+    .text-wrap {
+        width 60%
+        flex 60
+        padding 15px
+        
+        h3 {
+            font-weight 700
+            color corPrincipal
+        }
+    }
+    
+    &:nth-child(even){
+        .text-wrap {
+            order 1
+        }
+        
+        .img-wrap {
+            justify-content flex-end
+        }
+    }
+    &:last-child {
+        border-bottom 1px solid alpha(black, .4)
+    }
+    
+    +below('mobile'){
+        &:nth-child(even) {
+            background-color alpha(black, .05)
+        }
+        .img-wrap {
+            display none
+        }
+    }
+}
