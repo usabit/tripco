@@ -28,7 +28,7 @@ $(window).scroll(function(){
             if($('.site-header.homepage').data('size') == 'small')
             {
                 $('.site-header.homepage').data('size','big');
-                $('.site-header.homepage').stop().animate({padding:'50px 0'}, { queue: false, duration: duration });
+                $('.site-header.homepage').stop().animate({padding:'35px 0'}, { queue: false, duration: duration });
                 $('.site-header.homepage .trigger a.page-link').stop().animate({ fontSize:'18px' }, { queue: false, duration: duration });
                 $('.site-header.homepage .site-nav .responsive-menu').stop().animate({paddingTop:'160px'}, { queue: false, duration: duration });
             }  

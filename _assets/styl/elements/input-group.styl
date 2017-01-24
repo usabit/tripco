@@ -13,6 +13,11 @@
         left 9px
         transition 200ms
         font-style italic
+        
+        &.center {
+            left 50%
+            transform translateX(-50%)
+        }
     }
     
     input:not([value=""]) + span,
@@ -34,6 +39,16 @@
         
         input {
             width 100%
+        }
+    }
+    
+    &.text-center {
+        span {
+            left 50%
+            transform translateX(-50%)
+        }
+        input {
+            text-align center
         }
     }
 }

@@ -1,8 +1,98 @@
+.vantagens-showcase {
+    .vantagem {
+        border-top 1px solid alpha(black, .4)
+        overflow-x hidden // para a imagem não forçar rolagem
+        
+        &:last-child {
+            border-bottom 1px solid alpha(black, .4)
+        }
+        
+        .colored {
+            color corPrincipal
+        }
+        
+        .vantagem-content {
+            display flex
+        }
+        
+        .text-wrap {
+            order 1
+            margin-right 20px
+            padding 40px 0
+            flex 60
+
+            display flex
+            flex-direction column
+            align-items flex-start
+            justify-content center
+            
+            p {
+                font-size 1.2rem
+            }
+        }
+        
+        .img-wrap {
+            order 2
+            flex 40
+            position relative
+            
+            img {
+                height 100%
+                position absolute
+                left 0
+            }
+        }
+        
+        &:nth-child(even){
+            .text-wrap {
+                order 3
+                margin-right 0
+                margin-left 20px
+            }
+            
+            .img-wrap {
+                img {
+                    left initial
+                    right 0
+                }
+            }
+            
+        }
+    }
+}
+
+.colunas {
+    display flex
+    justify-content space-between
+    flex-wrap wrap
+    
+    +below('mobile'){
+        flex-direction column
+    }
+
+    .coluna {
+        flex 1 0 140px
+        margin-right 15px
+        
+        p {
+            font-size 1rem
+        }
+        
+        &:last-child {
+            margin-right 0
+        }
+    }
+}
+
+
 .row-homepage {
-    border-top 1px solid alpha(black, .4)
     
     .row-content {
         display flex
+    }
+
+    .text-wrap {
+        border red
     }
 
     .img-wrap {
@@ -11,17 +101,6 @@
         display flex
         justify-content flex-start
         align-items center
-    }
-    
-    .text-wrap {
-        width 60%
-        flex 60
-        padding 15px
-        
-        h3 {
-            font-weight 700
-            color corPrincipal
-        }
     }
     
     &:nth-child(even){
@@ -33,7 +112,7 @@
             justify-content flex-end
         }
     }
-    &:last-child {
+    &.border-bottom {
         border-bottom 1px solid alpha(black, .4)
     }
     

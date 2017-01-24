@@ -33,10 +33,10 @@ banner_img: /assets/img/contato-banner-01.jpg
         <ul class="social-media-list">
             {% for social_link in site.social-links %}
             <li>
-                {% include icon-social-contato.html link=social_link.link fontawesome_icon=social_link.fontawesome_icon description=social_link.description %}
+                {% include icon-social.html link=social_link.link icon=social_link.icon description=social_link.description %}
             </li>
             {% endfor %}
-        </ul>        
+        </ul>
 
     </div>
 </section>

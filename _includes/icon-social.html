@@ -1,3 +1,4 @@
 <a class="social-media-link" href="{{ include.link }}" target="_blank">
   <img src="{{ include.icon | prepend: '/assets/img/' | prepend: site.baseurl }}" alt="">
+  {% if include.description %}<span>{{ include.description }}</span>{% endif %}
 </a>
