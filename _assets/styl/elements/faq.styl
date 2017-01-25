@@ -1,0 +1,77 @@
+.faq-wrapper {
+    background-color #a28356
+    padding 40px
+    
+    .faq-title {
+        text-align right
+        color white
+    }
+    
+    .ui-accordion-content {
+        p {
+            margin 0
+        }
+    }
+}
+
+.ui-state-default, 
+.ui-widget-content .ui-state-default, 
+.ui-widget-header .ui-state-default, 
+.ui-button, 
+html .ui-button.ui-state-disabled:hover, 
+html .ui-button.ui-state-disabled:active {
+    background alpha(black, .25)
+    border 0
+}
+
+.ui-state-active, 
+.ui-widget-content .ui-state-active, 
+.ui-widget-header .ui-state-active, 
+a.ui-button:active, 
+.ui-button:active, 
+.ui-button.ui-state-active:hover {
+    background alpha(black, .25)
+    border 0
+}
+
+.ui-accordion .ui-accordion-header {
+    font-size 1rem
+    font-weight 400
+    position relative
+    display flex
+    align-items center
+    justify-content flex-start
+    margin-top 5px
+    color alpha(black, .7)
+    background-color alpha(white, .99)
+    padding 15px 0
+    
+    &:first-child {
+        margin-top 0
+    }
+    
+    &:before {
+        font-family FontAwesome
+        content '\f059'
+        margin-right 10px
+        margin-left 15px
+    }
+    
+    &:after {
+        content none
+    }
+}
+
+.ui-widget-content {
+    background-color alpha(white, .8)
+    color alpha(black, .7)
+    border 0
+    padding 20px
+}
+
+.ui-corner-flat > * {
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}

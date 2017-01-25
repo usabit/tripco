@@ -5,13 +5,14 @@ header.site-header {
   top 0
   left 0
   right 0
-  padding 20px 0
   z-index 10
+  height 70px
   
   .wrapper {
     display flex
     justify-content space-around
     align-items center
+    height 100%
   }
 
   .site-title {
@@ -104,7 +105,7 @@ header.site-header {
 
   &.homepage {
     +above('small-tablet'){
-      padding 35px 0
+      height 100px
       .trigger a.page-link {
         font-size 18px
       }

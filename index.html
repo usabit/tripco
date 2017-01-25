@@ -36,20 +36,20 @@ layout: default
             <div class="wrapper">
                 <div class="vantagem-content">
                     <div class="text-wrap">
-                        <h2 class="title mb-15">Tem um minuto?</h2>
+                        <h2 class="title mb-5">Tem um minuto?</h2>
                         <h2 class="title">Vamos falar sobre <strong class="colored">Eficiência.</strong></h2>
 
                         <p class="mtb-40">Controle demandas dos hóspedes em tempo real. Reduza custos operacionais. Automatize processos braçais. Gerencia tudo via smartphone.</p>
 
                         <div class="colunas">
                             <div class="coluna">
-                                <h3 class="colored">Antecipe informações de Checkin</h3>
-                                <p>O Tripco reduz filas no lobby. E isso é possível através do Check-in pelo seu app, como nas companhias aéreas.</p>
+                                <h4 class="coluna-title colored">Antecipe informações de Checkin</h4>
+                                <p class="coluna-text">O Tripco reduz filas no lobby. E isso é possível através do Check-in pelo seu app, como nas companhias aéreas.</p>
                             </div>
 
                             <div class="coluna">
-                                <h3 class="colored">Dê um passo para o futuro</h3>
-                                <p>Profissionalize a gestão da sua empresa renovando processos através da tecnologia.</p>
+                                <h4 class="coluna-title colored">Dê um passo para o futuro</h4>
+                                <p class="coluna-text">Profissionalize a gestão da sua empresa renovando processos através da tecnologia.</p>
                             </div>
                         </div>
                     </div>
@@ -66,13 +66,13 @@ layout: default
             <div class="wrapper">
                 <div class="vantagem-content">
                     <div class="text-wrap">
-                        <h2 class="title mb-20">Controle à distância</h2>
-                        <h3 class="subtitle">Quer ficar em casa? Monitore tudo com o Tripco</h3>
+                        <h1 class="title mb-20">Controle à distância</h1>
+                        <h2 class="subtitle">Quer ficar em casa? Monitore tudo com o Tripco</h2>
                         <p class="mtb-40">Basta ter acesso à internet para acompanhar seu hotel em tempo real.</p>
                         <a class="btn" href="#">Experimente Antes</a>
                     </div>
                     <div class="img-wrap">
-                        <img class="m-40" src="{{ 'assets/img/homepage-controleadistancia.png' | prepend: site.baseurl }}" alt="">
+                        <img src="{{ 'assets/img/homepage-controleadistancia.png' | prepend: site.baseurl }}" alt="">
                     </div>
                 </div>
             </div>
@@ -88,12 +88,12 @@ layout: default
                         <p class="mtb-40">Faça de seu hotel uma experiência inesquecível. Invista em comididades além do padrão com o Tripco.</p>
                         <div class="colunas">
                             <div class="coluna">
-                                <h3 class="colored">Pedidos da cozinha pelo aplicativo</h3>
-                                <p>Solicitações de pratos podem ser muito mais rápidas se feitas em um canal direto, sem interromper o Lobby.</p>
+                                <h3 class="coluna-title colored">Pedidos da cozinha pelo aplicativo</h3>
+                                <p class="coluna-text">Solicitações de pratos podem ser muito mais rápidas se feitas em um canal direto, sem interromper o Lobby.</p>
                             </div>
                             <div class="coluna">
-                                <h3 class="colored">Informações completas e acessíveis</h3>
-                                <p>Ganhe tempo disponibilizando todas as informações do hotel no smartphone e reduza custos de impressão.</p>
+                                <h3 class="coluna-title colored">Informações completas e acessíveis</h3>
+                                <p class="coluna-text">Ganhe tempo disponibilizando todas as informações do hotel no smartphone e reduza custos de impressão.</p>
                             </div>
                         </div>
                     </div>
@@ -110,8 +110,8 @@ layout: default
             <div class="wrapper">
                 <div class="vantagem-content">
                     <div class="text-wrap">
-                        <h2 class="title">Organize as demandas do Lobby</h2>
-                        <h3 class="subtitle">O Tripco centraliza todas as demandas dos quartos em uma única tela.</h3>
+                        <h1 class="title">Organize as demandas do Lobby</h1>
+                        <h2 class="subtitle mtb-40">O Tripco centraliza todas as demandas dos quartos em uma única tela.</h2>
                         <a class="btn align-right" href=#>Experimente Antes</a>
                     </div>
                     <div class="img-wrap">
@@ -125,12 +125,69 @@ layout: default
 
     </div>
 
-
-    <div class="cta-newsletter ptb-40">
+    <div class="cta-newsletter-wrapper pt-50 pb-55">
         <div class="wrapper center">
-            <h2>Seja o primeiro a experimentar esta ferramenta em seu hotel!</h2>
-            <p class="mt-40 mb-30">Nós avisaremos por e-mail sobre o lançamento da tripco.</p>
-            {% include newsletter-form.html %}
+            <div class="cta-newsletter-box p-30">
+                <h2 class="cta-newsletter-title">Seja o primeiro a <br> experimentar esta <br> ferramenta em seu hotel!</h2>
+                <p class="cta-newsletter-subtitle mt-30 mb-20">Nós avisaremos por e-mail <br> sobre o lançamento da tripco.</p>
+                {% include newsletter-form.html %}                
+            </div>
+        </div>
+    </div>
+
+    <a class="anchor" id="duvidas"></a>
+    <div class="faq-wrapper mb-60">
+        <div class="wrapper">
+            <h1 class="faq-title mb-15">Dúvidas Rápidas</h1>
+            <div id="accordion">
+                <h3>O que é o Tripco?</h3>
+                <div>
+                    <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+                </div>
+                <h3>O que eu ganho com o Tripco?</h3>
+                <div>
+                    <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+                </div>
+                <h3>Como eu acesso o Tripco?</h3>
+                <div>
+                    <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
+                    <ul>
+                        <li>List item one</li>
+                        <li>List item two</li>
+                        <li>List item three</li>
+                    </ul>
+                </div>
+                <h3>Meus funcionários podem usar?</h3>
+                <div>
+                    <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p>
+                    <p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                </div>
+                <h3>O Tripco substitui meu sistema atual?</h3>
+                <div>
+                    <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p>
+                    <p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                </div>
+                <h3>Quanto custa contratar?</h3>
+                <div>
+                    <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p>
+                    <p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                </div>
+                <h3>Preciso de treinamento para usar?</h3>
+                <div>
+                    <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p>
+                    <p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                </div>
+                <h3>Há suporte técnico?</h3>
+                <div>
+                    <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p>
+                    <p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                </div>
+                <h3>Posso usar o Tripco sem internet?</h3>
+                <div>
+                    <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p>
+                    <p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+                </div>
+            </div>            
         </div>
     </div>
 
