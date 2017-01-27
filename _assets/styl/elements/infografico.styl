@@ -1,0 +1,84 @@
+table.infografico {
+    
+    width 100%
+    
+    thead th {
+        text-align center
+    }
+    
+    .pergunta {
+        width 100%
+        text-align left
+        font-size 1.2rem
+        line-height 1.2
+        font-weight 100
+    }
+    
+    .pergunta-sozinha {
+        display none
+        td {
+            padding-top 30px
+        }
+    }
+    
+    +below('tablet') {
+        .pergunta {
+            display none
+        }
+
+        .pergunta-sozinha {
+            display table-row
+        }
+    }
+
+    +below('small-tablet'){
+        .emoji {
+            display none
+        }
+    }
+    
+    +below('mobile'){
+        .vs {
+            display none
+        }
+    }
+    
+    td {
+        padding 15px
+        text-align center
+    }
+    
+    .fundo-vermelho, .fundo-verde {
+        background-image url('../img/infografico-comofunciona-fundovermelho.png')
+        background-repeat no-repeat
+        background-position center center
+        width 234px
+        min-width 234px
+        height 90px
+        font-size 1rem
+        font-weight 100
+        line-height 1.1
+        color alpha(black, .8)
+        padding 15px 10px
+        
+        +below('small-tablet'){
+            font-size .9rem
+            background-image none
+            background-color #FCC0B4
+        }
+    }
+    
+    .fundo-verde {
+        background-image url('../img/infografico-comofunciona-fundoverde.png')
+        +below('small-tablet'){
+            background-image none
+            background-color #ddf1b7
+        }
+    }
+    
+    .titulo {
+        font-size 1.2rem
+        font-weight 500
+        padding-bottom 30px
+    }
+}
