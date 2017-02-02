@@ -5,23 +5,42 @@ table.infografico {
     thead th {
         text-align center
     }
+
+    thead tr th:first-child,
+    tbody tr td:first-child {
+        background-color alpha(black, .10)
+    }
     
+    tbody tr td {
+        border-bottom 1px solid alpha(black, .2)
+    }
+
     .pergunta {
         width 100%
         text-align left
-        font-size 1.2rem
+        font-size 1rem
         line-height 1.2
-        font-weight 100
+        font-weight 400
     }
     
     .pergunta-sozinha {
         display none
         td {
             padding-top 30px
+            color black + 20%
+            // font-size 0
+                border-bottom 0
         }
     }
     
-    +below('tablet') {
+    .emoji {
+        padding 0 60px
+        &:last-child {
+            padding-right 15px
+        }
+    }
+    
+    +below(1200px) {
         .pergunta {
             display none
         }
@@ -29,11 +48,17 @@ table.infografico {
         .pergunta-sozinha {
             display table-row
         }
+        
+        .emoji {
+            padding 0 15px
+        }
     }
 
     +below('small-tablet'){
         .emoji {
-            display none
+            img {
+                display none
+            }
         }
     }
     
@@ -49,36 +74,44 @@ table.infografico {
     }
     
     .fundo-vermelho, .fundo-verde {
-        background-image url('../img/infografico-comofunciona-fundovermelho.png')
-        background-repeat no-repeat
-        background-position center center
+        > div {
+            width 100%
+            min-height 90px
+            padding 10px
+            display flex
+            align-items center
+            justify-content center
+            font-size .9rem
+            font-weight 400
+            line-height 1.1
+            color alpha(black, .8)
+            border-radius 8px
+        }
+
         width 234px
         min-width 234px
-        height 90px
-        font-size 1rem
-        font-weight 100
-        line-height 1.1
-        color alpha(black, .8)
-        padding 15px 10px
+        padding 30px 0
         
         +below('small-tablet'){
-            font-size .9rem
-            background-image none
-            background-color #FCC0B4
+            min-width initial
+            width initial
+            > div {
+                background-color #fcc0b6
+            }
         }
     }
     
     .fundo-verde {
-        background-image url('../img/infografico-comofunciona-fundoverde.png')
-        +below('small-tablet'){
-            background-image none
-            background-color #ddf1b7
+        > div {
+            background-color #d7efaa;
         }
     }
     
     .titulo {
         font-size 1.2rem
         font-weight 500
-        padding-bottom 30px
+        padding-top 30px
+        padding-bottom 10px
+        color black +30%
     }
 }
