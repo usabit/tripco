@@ -33,13 +33,6 @@ table.infografico {
         }
     }
     
-    .emoji {
-        padding 0 60px
-        &:last-child {
-            padding-right 15px
-        }
-    }
-    
     +below(1200px) {
         .pergunta {
             display none
@@ -51,20 +44,6 @@ table.infografico {
         
         .emoji {
             padding 0 15px
-        }
-    }
-
-    +below('small-tablet'){
-        .emoji {
-            img {
-                display none
-            }
-        }
-    }
-    
-    +below('mobile'){
-        .vs {
-            display none
         }
     }
     
@@ -113,5 +92,79 @@ table.infografico {
         padding-top 30px
         padding-bottom 10px
         color black +30%
+    }
+    
+    .emoji {
+        padding 0 60px
+        &:last-child {
+            padding-right 15px
+        }
+        
+        +below('small-tablet'){
+            padding 0
+            img {
+                display none
+            }
+        }
+    }
+
+    .emoji-mobile {
+        display none !important
+        background-color transparent !important
+        img {
+            width 50px
+        }
+        
+        +below('small-tablet') {
+            display block !important
+        }
+    }
+    
+    // ------------------------------------------------------
+        
+    .vs {
+        +below('small-tablet'){
+            img {
+                margin-top 90px
+            }
+        }
+        
+        +below('mobile'){
+            display none
+        }
+    }
+    
+    +below('mobile'){
+        tbody tr {
+            display flex
+            flex-direction column
+            
+            td {
+                border-bottom 0 !important
+            }
+        }
+        thead {
+            display none
+        }
+        .fundo-vermelho {
+            display flex
+            padding-bottom 0
+            div {
+                flex 1
+            }
+            .emoji-mobile {
+                flex 0
+            }
+        }
+        .fundo-verde {
+            display flex
+            .emoji-mobile {
+                order 2
+                flex 0
+            }
+        }
+        .pergunta-sozinha td {
+            border-top 1px solid alpha(black, .2)
+        }
     }
 }
