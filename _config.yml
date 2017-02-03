@@ -25,7 +25,15 @@ google_map: https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d759.28382152346
 # Build settings
 markdown: kramdown
 
+gems: ['kramdown']
+
 exclude: [
+  'config.ru', 
+  'Gemfile', 
+  'Gemfile.lock', 
+  'vendor', 
+  'Procfile', 
+  'Rakefile',
   'node_modules', 
   'gulpfile.js',
   'package.json',
