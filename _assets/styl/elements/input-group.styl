@@ -1,4 +1,70 @@
+// .input-group {
+//     position relative
+//     background-color white
+//     padding 5px 9px
+//     border-radius 3px
+//     align-self flex-start
+//     cursor text
+
+//     span {
+//         color alpha(black, .4)
+//         position absolute
+//         top 1rem
+//         left 9px
+//         transition 200ms
+//         font-style italic
+        
+//         &.center {
+//             left 50%
+//             transform translateX(-50%)
+//         }
+//     }
+    
+//     input:not([value=""]) + span,
+//     input:focus + span {
+//         top .5rem
+//         font-size .7rem
+//     }
+    
+//     input {
+//         width 300px
+//         margin-top 18px
+//         font-size 1rem
+//         border 0
+//         outline 0
+//     }
+    
+//     &.full-width {
+//         width 100%
+        
+//         input {
+//             width 100%
+//         }
+//     }
+    
+//     &.text-center {
+//         span {
+//             left 0
+//             width 100%
+//             text-align center
+//         }
+//         input {
+//             text-align center
+//         }
+//     }
+// }
+
+// <label class="input-group full-width text-center">
+//     <input type="text" name="nome" value="" onkeyup="this.setAttribute('value', this.value);">
+//     <span>Nome</span>
+//     <div class="error">
+//         <span class="error-message">teste</span>
+//         <i class="error-icon fa fa-exclamation"></i>
+//     </div>
+// </label>
+
 .input-group {
+    display block
     position relative
     background-color white
     padding 5px 9px
@@ -6,28 +72,43 @@
     align-self flex-start
     cursor text
 
-    span {
+    > span {
         color alpha(black, .4)
         position absolute
-        top 1rem
-        left 9px
+        top 50%
+        left 10px
         transition 200ms
         font-style italic
-        
-        &.center {
-            left 50%
-            transform translateX(-50%)
-        }
+        transform translate3d(0, -50%, 0)
+        text-transform capitalize
     }
     
     input:not([value=""]) + span,
     input:focus + span {
-        top .5rem
+        // transform translate3d(0, 0, 0)
         font-size .7rem
+        top 1em
+    }
+    
+    textarea + span {
+        top 0
+        left 0
+    }
+    
+    textarea {
+        display block
+        margin 0
+        margin-top 22px
+        resize none
+        width 100%
+        height 70px
+        outline 0
+        border 0
+        padding 5px
     }
     
     input {
-        width 300px
+        display block
         margin-top 18px
         font-size 1rem
         border 0
@@ -43,13 +124,35 @@
     }
     
     &.text-center {
-        span {
-            left 0
+        > span {
             width 100%
             text-align center
+            left 0
+            transform translate3d(0, -50%, 0)
         }
         input {
             text-align center
+        }
+    }
+    
+    .error {
+        display none
+        color alpha(red - 40%, .8)
+        border alpha(red - 20%, .8)
+        position absolute
+        trbl 0
+        flex-direction row
+        align-items center
+        justify-content flex-end
+        font-style italic
+        
+        .error-icon {
+            font-size 18px
+            margin 0 10px
+        }
+        .error-message {
+            text-align right
+            font-size 12px
         }
     }
 }

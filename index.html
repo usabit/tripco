@@ -69,7 +69,7 @@ layout: default
                         <h1 class="title mb-20">Controle à distância</h1>
                         <h2 class="subtitle">Quer ficar em casa? Monitore tudo com o Tripco</h2>
                         <p class="mtb-40">Basta ter acesso à internet para acompanhar seu hotel em tempo real.</p>
-                        <a class="btn" href="#">Experimente Antes</a>
+                        <a class="btn" href="#experimente">Experimente Antes</a>
                     </div>
                     <div class="img-wrap">
                         <img src="{{ '/assets/img/homepage-controleadistancia.png' | prepend: site.baseurl }}" alt="">
@@ -112,7 +112,7 @@ layout: default
                     <div class="text-wrap">
                         <h1 class="title">Organize as demandas do Lobby</h1>
                         <h2 class="subtitle mtb-40">O Tripco centraliza todas as demandas dos quartos em uma única tela.</h2>
-                        <a class="btn align-right" href=#>Experimente Antes</a>
+                        <a class="btn align-right" href=#experimente>Experimente Antes</a>
                     </div>
                     <div class="img-wrap">
                         <img src="{{ '/assets/img/homepage-demandas.png' | prepend: site.baseurl }}" alt="">
@@ -125,6 +125,7 @@ layout: default
 
     </div>
 
+    <a class="anchor" name="experimente" id="experimente"></a>
     <div class="cta-newsletter-wrapper pt-50 pb-55">
         <div class="wrapper center">
             <div class="cta-newsletter-box p-30">
@@ -138,29 +139,10 @@ layout: default
     <div class="mtb-60">
         <div class="wrapper">
             <h3 class="mtb-60 center">Últimas do setor de hotelaria</h3>
-            <ul class="medium-posts">
-                <li class="post">
-                    <a href="#">
-                        <h4 class="post-title">Lorem ipsum dolor sit amet.</h4>
-                        <p class="post-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sit, nostrum tempore. Nihil, quasi, nam!</p>
-                        <p class="post-writer">Lorem ipsum - August 2016</p>
-                    </a>
-                </li>
-                <li class="post">
-                    <a href="#">
-                        <h4 class="post-title">Lorem ipsum dolor sit amet.</h4>
-                        <p class="post-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sit, nostrum tempore. Nihil, quasi, nam!</p>
-                        <p class="post-writer">Lorem ipsum - August 2016</p>
-                    </a>
-                </li>
-                <li class="post">
-                    <a href="#">
-                        <h4 class="post-title">Lorem ipsum dolor sit amet.</h4>
-                        <p class="post-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto sit, nostrum tempore. Nihil, quasi, nam!</p>
-                        <p class="post-writer">Lorem ipsum - August 2016</p>
-                    </a>
-                </li>
-            </ul>
+            <div class="medium-loading center">
+                {% include img/svg-loading.html size="50px" fill="#000" %}
+            </div>
+            <ul class="medium-posts" id="medium-posts"></ul>
         </div>
     </div>
 
@@ -221,3 +203,17 @@ layout: default
     </div>
 
 </div>
+
+<script id="medium-template" type="text/x-handlebars-template">
+
+    {% raw %}
+    <li class="post">
+        <a href="{{postLink}}">
+            <h4 class="post-title">{{postTitle}}</h4>
+            <p class="post-subtitle">{{postSubtitle}}</p>
+            <p class="post-writer">Rafael Tavares - {{postDate}}</p>
+        </a>
+    </li>
+    {% endraw %}
+
+</script>

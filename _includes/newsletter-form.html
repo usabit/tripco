@@ -1,8 +1,20 @@
 <form name="newsletter" class="newsletter center mt-20">
-  <label class="input-group text-center full-width mtb-20">
-    <input type="text" name="email" value="" onkeyup="this.setAttribute('value', this.value);">
-    <span>Deixe seu e-mail aqui</span>
-  </label>
-  <a class="btn" href="#">Saiba antes sobre o lançamento</a>
-  <small class="mt-20">E experimente gratuitamente</small>
+    <label class="input-group full-width text-center mt-20 mb-10">
+        <input type="text" name="email" value="" onkeyup="this.setAttribute('value', this.value);">
+        <span>Deixe seu e-mail aqui</span>
+        <div class="error">
+            <i class="error-icon fa fa-exclamation"></i>
+        </div>
+    </label>
+    <div class="newsletter-error" style="display: none;">Ocorreu um erro, tente novamente mais tarde.</div>
+    <button class="btn sendMailing mt-10">
+        Saiba antes sobre o lançamento
+        {% include img/svg-loading.html size="30px" fill="#fff" %}
+    </button>
+    <small class="mt-20">E experimente gratuitamente</small>
 </form>
+
+<div class="newsletter-success mt-60" style="display: none;">
+    <h3 class="center">E-mail Cadastrado com sucesso.</h3>
+    <p>Você receberá as novidades diretamente no seu e-mail!</p>
+</div>
