@@ -82,7 +82,7 @@ jQuery(document).ready(function() {
                 $(form).find('.newsletter-error').show();
             })
             .always(function() {
-                $('.btn-send').removeClass('sending');
+                $('.sendMailing').removeClass('sending');
             });
 
     });
