@@ -28,12 +28,15 @@ for num in sizes
     margin-bottom: unit(num * -1, px)
   .n-mt-{num}
     margin-top: unit(num * -1, px)
+  .n-mtb-{num}
+    margin-top: unit(num * -1, px)
+    margin-bottom: unit(num * -1, px)
   .n-ml-{num}
     margin-left: unit(num * -1, px)
   .n-mr-{num}
     margin-right: unit(num * -1, px)
     
-  +below('mobile')
+  +below('s')
     .mobile-n-m-{num}
       margin: unit(num * -1, px)
     .mobile-n-mb-{num}

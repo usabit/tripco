@@ -5,6 +5,10 @@ a {
   display inline-block
 }
 
+a.anchor {
+  display inline
+}
+
 a.contato {
   font-weight 300
   font-size 1.125rem
@@ -37,14 +41,15 @@ a.contato {
 
 .btn {
   text-decoration none
-  padding 15px 18px
+  padding 15px 25px
+  border-radius 40px
   display inline-flex
   align-self flex-start
   color white
-  background-color verdeTripco
-  font-size 1.2rem
+  background-color #31bd4f
+  font-size 1rem
   font-weight 500
-  border 2px solid verdeTripco - 25%
+  border 2px solid #31bd4f - 25%
   cursor pointer
   
   flex-direction row
@@ -58,7 +63,7 @@ a.contato {
   }
   
   &:hover {
-    background-color verdeTripco - 30%
+    background-color #31bd4f - 30%
     transition 200ms
   }
   
@@ -71,6 +76,15 @@ a.contato {
     pointer-events none
     svg {
       display block
+    }
+  }
+  
+  &.btn-orange {
+    background-color #ce6b01
+    border 2px solid #ce6b01 - 25%
+    &:hover {
+      background-color @background-color - 30%
+      transition 200ms
     }
   }
 

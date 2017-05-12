@@ -1,148 +1,144 @@
 header.site-header {
-  background-color alpha(black, .7)
-  border-bottom 2px solid alpha(white, .7)
-  position fixed
-  top 0
-  left 0
-  right 0
-  z-index 10
-  height 70px
-  
-  .wrapper {
-    display flex
-    justify-content space-around
-    align-items center
-    height 100%
-  }
+    transform translate3d(0, 0, 0); // force hardware aceleration
+    background-color #372920
+    box-shadow 0 5px 30px 10px #372920
+    position fixed
+    top 0
+    left 0
+    right 0
+    z-index 10
+    padding 20px 0 10px
 
-  .site-title {
-    display inline-flex
-    align-items flex-start
-  }
-  
-  .site-nav {
-    borderWidth = 3.5
-    .menu-icon {
-      display inline-block
-      size(45px)
-      border-radius 50%
-      z-index 2
-      position relative
-      cursor pointer
-      
-      &:not(.active){
-        border unit(borderWidth, px) solid white
-        box-shadow inset 0 0 2px alpha(black, .2)
-        &:after {
-          content ''
-          position absolute
-          top unit(borderWidth * 0, px)
-          bottom unit(borderWidth * 0, px)
-          left unit(borderWidth * 0, px)
-          right unit(borderWidth * 0, px)
-          display block
-          border-radius 50%
-          z-index 1
-          animation-name breathInsideOut
-          animation-duration 4s
-          animation-iteration-count infinite
-        }        
-      }
-
-      &.active:before {
-        font-family FontAwesome
-        content '\f00d'
-        font-size 30px
-        color white
-        position absolute
-        trbl 0
+    .wrapper {
         display flex
+        justify-content space-around
         align-items center
-        justify-content center
-      }
-      
-      +above('tablet'){
-        display none
-      }
+        height 100%
     }
-    
-    .trigger {
-      display flex
-      align-items center
-      
-      +below('small-tablet'){
-        display none
-      }
-      
-      a.page-link {
-        position relative
-        color white
-        padding 5px 18px
-        text-decoration none
-        font-size 14px
 
-        &:after {
-          content ''
-          position absolute
-          left 15px
-          right 15px
-          bottom 3px
-          height 2px
-          background-color transparent
-        }
-        
-        &:hover,
-        &.active {
-          &:after {
-            bottom -3px
-            transition all 200ms
-            background-color verdeTripco
-          }
-        }
-      }
+    .site-title {
+        display inline-flex
+        align-items flex-start
     }
-  }
 
-  &.homepage {
-    +above('small-tablet'){
-      height 100px
-      .trigger a.page-link {
-        font-size 18px
-      }
+    .site-slogan {
+        color: #debd5a
+        font-style italic
+        font-weight 300
+        margin-left 10px
     }
-  }
+
+    .site-nav {
+        borderWidth = 3.5
+
+        .menu-icon {
+            display inline-block
+            size(45px)
+            border-radius 50%
+            z-index 2
+            position relative
+            cursor pointer
+
+            &:not(.active){
+                border unit(borderWidth, px) solid white
+                box-shadow inset 0 0 2px alpha(black, .2)
+                &:after {
+                    content ''
+                    position absolute
+                    top unit(borderWidth * 0, px)
+                    bottom unit(borderWidth * 0, px)
+                    left unit(borderWidth * 0, px)
+                    right unit(borderWidth * 0, px)
+                    display block
+                    border-radius 50%
+                    z-index 1
+                    animation-name breathInsideOut
+                    animation-duration 4s
+                    animation-iteration-count infinite
+                }
+            }
+
+            &.active:before {
+                font-family FontAwesome
+                content '\f00d'
+                font-size 30px
+                color white
+                position absolute
+                trbl 0
+                display flex
+                align-items center
+                justify-content center
+            }
+
+            +above('tablet'){
+                display none
+            }
+        }
+
+        .trigger {
+            display flex
+            align-items center
+
+            +below('m'){
+                display none
+            }
+
+            a.page-link {
+                position relative
+                color white
+                padding 5px 18px
+                text-decoration none
+                font-size 14px
+
+                &:after {
+                    content ''
+                    position absolute
+                    left 15px
+                    right 15px
+                    bottom 3px
+                    height 2px
+                    background-color transparent
+                }
+
+                &:hover,
+                &.active {
+                    &:after {
+                        bottom -3px
+                        transition all 200ms
+                        background-color verdeTripco
+                    }
+                }
+            }
+        }
+    }
 }
 
 header.site-header .site-nav .responsive-menu {
-  padding-top 85px
-  position fixed
-  trbl 0
-  background-color alpha(verdeTripco, .9)
-  display none
-  flex-direction column
-  justify-content space-around
-  z-index -1
-  
-  &.active {
-    display flex
-  }
+    padding-top 85px
+    position fixed
+    trbl 0
+    background-color alpha(verdeTripco, .9)
+    display none
+    flex-direction column
+    justify-content space-around
+    z-index -1
 
-  a {
-    color white
-    display flex
-    align-items center
-    justify-content center
-    font-size 5vh
-    padding 2vh
-    
-    &:hover {
-      background-color white
-      color verdeTripco
-      transition 100ms
+    &.active {
+        display flex
     }
-  }
-}
 
-header.site-header.homepage .site-nav .responsive-menu {
-  padding-top 160px
+    a {
+        color white
+        display flex
+        align-items center
+        justify-content center
+        font-size 5vh
+        padding 2vh
+
+        &:hover {
+            background-color white
+            color verdeTripco
+            transition 100ms
+        }
+    }
 }

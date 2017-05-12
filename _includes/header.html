@@ -1,10 +1,11 @@
-<header class="site-header {% if page.url == '/' %}homepage{% endif %}">
+<header class="site-header">
 
   <div class="wrapper">
 
     <a class="site-title" href="{{ site.baseurl }}/">
       <img src="{{site.baseurl}}/assets/img/tripco-logo.png" alt="Tripco">
     </a>
+    <span class="site-slogan small">quanto vale cada estrela?</span>
 
     <span class="flex-spacer"></span>
 
@@ -13,7 +14,6 @@
       <div class="responsive-menu"></div>
 
       <div class="trigger">
-        <a class="page-link {% if page.url == '/' %}active{% endif %}" href="{{'/' | prepend: site.baseurl}}">Início</a>
         {% assign sorted_pages = site.pages | sort:"order" %}
         {% for my_page in sorted_pages %}
           {% if my_page.title %}
@@ -21,10 +21,10 @@
           {% endif %}
         {% endfor %}
 
+        {% if page.url == '/' %}<a class="page-link" href="#duvidas">Perguntas frequentes</a>{% endif %}
       </div>
     </nav>
 
-    {% if page.url == '/' %}<a class="page-anchor" href="#duvidas">Dúvidas</a>{% endif %}
 
   </div>
 

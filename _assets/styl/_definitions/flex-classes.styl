@@ -1,0 +1,30 @@
+.flex-valign-center {
+    display flex
+    align-items center
+}
+.flex-valign-baseline {
+    display flex
+    align-items baseline    
+}
+
+.flex-wrap {
+    flex-wrap wrap
+}
+
+.flex-justify-space-between {
+    display flex
+    justify-content space-between
+}
+
+.flex-valign-center,
+.flex-valign-baseline {
+    .flex-1 {
+        flex 1 0 0
+    }
+}
+
+.flex-column-m {
+    +below('m'){
+        flex-direction column
+    }
+}

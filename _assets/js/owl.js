@@ -8,7 +8,7 @@ $(function() {
         autoplayHoverPause: true,
         slideSpeed: 1300,
         items : 1,
-        loop: true,
+        loop: false,
         navText: [
             "<i class='fa fa-chevron-left'></i>",
             "<i class='fa fa-chevron-right'></i>"

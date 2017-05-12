@@ -1,72 +1,56 @@
 html, body {
-  font-family Montserrat
-  font-size 16px
-  font-weight 400
-  color alpha(black, .4)
+    font-family 'Lato', sans-serif
+    font-weight 400
+    font-size 14px
+    line-height 1.3
+    color #434343
+
+    +above('m'){ font-size: 16px; }
 }
+
+.no-wrap { white-space: nowrap; }
+
+small, .small { font-size: 0.9em; }
+.big { font-size: 1.1em; }
+
+.bold { font-weight: 700; }
+.black { font-weight: 900; }
+.light { font-weight: 300; }
+.italic { font-weight: 300; font-style: italic; }
+.uppercase { text-transform: uppercase; }
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-left { text-align: left; }
+
+.hide-xs {
+    +below('xs'){ display: none; }
+}
+.hide-s {
+    +below('s'){ display: none; }
+}
+.hide-m {
+    +below('m'){ display: none; }
+}
+.hide-l {
+    +below('l'){ display: none; }
+}
+.hide-xl {
+    +below('xl'){ display: none; }
+}
+.hide-hd {
+    +below('hd'){ display: none; }
+}
+
+.color-green { color: #a3bd31; }
+.color-brown { color: #855b40; }
+
+h1 { font-size: 1.75em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.3em; }
+h4 { font-size: 1.1em; }
+h5 { font-size: 1em; }
 
 p {
-  margin 20px 0
-  line-height 1.4
-}
-
-strong {
-  font-weight 700
-}
-
-// Headers
-h1 {
-  font-size 2.375rem
-  font-weight 700
-  
-  +below('tablet'){
-    font-size 2rem
-  }
-}
-
-h2 {
-  font-size 1.875rem
-  font-weight 700
-  
-  +below('tablet'){
-    font-size 1.5rem
-  }
-}
-
-h3 {
-  font-size 1.375rem
-  font-weight 700
-  +below('tablet'){
-    font-size 1.1rem
-  }
-}
-
-// *********************** //
-.light {
-  font-weight 300
-}
-
-.center {
-  text-align center
-}
-
-.fm {
-  font-size 1.375rem
-}
-
-.accent-foreground {
-  color corPrincipal !important
-}
-
-.accent-background {
-  background-color corPrincipal !important
-  color white !important
-}
-
-.italic {
-  font-style italic
-}
-
-.bold {
-  font-weight bolder
+    margin-bottom: 20px;
 }

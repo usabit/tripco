@@ -1,10 +1,27 @@
 .faq-wrapper {
     background-color #a28356
+    background-image url(../img/faq-background.jpg)
+    background-size cover
+    background-position center center
     padding 40px
     
+    .wrapper {
+        display flex
+        align-items center
+        +below('m'){ flex-direction: column; }
+    }
+    
     .faq-title {
-        text-align right
+        font-size 3rem
         color white
+        flex 40
+        margin-right 80px
+        +below('m'){ margin-right: 0; }
+    }
+    
+    #accordion {
+        flex 60
+        +below('m'){ align-self: stretch; }
     }
     
     .ui-accordion-content {
@@ -41,21 +58,14 @@ a.ui-button:active,
     display flex
     align-items center
     justify-content flex-start
-    margin-top 5px
-    color alpha(black, .7)
-    background-color alpha(white, .99)
+    color white
+    background-color transparent
+    border-top 1px solid alpha(white, .45)
     padding 15px 0
     cursor pointer
     
     &:first-child {
-        margin-top 0
-    }
-    
-    &:before {
-        font-family FontAwesome
-        content '\f059'
-        margin-right 10px
-        margin-left 15px
+        border-top 0
     }
     
     &:after {
@@ -64,10 +74,10 @@ a.ui-button:active,
 }
 
 .ui-widget-content {
-    background-color alpha(white, .8)
-    color alpha(black, .7)
+    background-color alpha(white, .2)
     border 0
     padding 20px
+    color: #3E2B20;
 }
 
 .ui-corner-flat > * {
